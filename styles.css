@@ -1,0 +1,270 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom right, #4da7db, #66ccff);
+    color: #fff;
+    height: 95vh;
+}
+
+.hero-alternate {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom right, #ffffff, #b3d9ff); /* Gradient from white to light blue */
+    color: #333; /* Text color to ensure readability */
+    height: 95vh;
+}
+
+.hero h1, .hero-alternate h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p, .hero-alternate p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition background color and text color */
+    font-size: 18px;
+    border: 2px solid #007bff; /* Add border for contrast */
+    position: relative;
+    overflow: hidden; /* Hide overflowing gradient */
+}
+
+.cta-button:hover {
+    background-image: linear-gradient(to right, #007bff, #0099ff); /* Gradient transition on hover */
+    border-color: #0056b3; /* Darker border color on hover */
+    color: #fff; /* White text color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow on hover for depth */
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Overlay gradient */
+    transition: opacity 0.3s ease; /* Transition opacity */
+    pointer-events: none; /* Ignore pointer events */
+}
+
+.cta-button:hover:before {
+    opacity: 1; /* Fully show overlay gradient on hover */
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-right {
+    position: relative;
+    flex: 1;
+}
+
+.portrait {
+    width: 40vw;
+    height: auto;
+    border-radius: 50%;
+}
+
+.training_pic{
+    width: 40vw;
+    height: 45vh;
+    padding: 10px;
+}
+
+.training_txt{
+    width: 45vw;
+    height: 45vh;
+    padding: 10px;
+    text-align: center;
+}
+
+.trainer-name {
+    font-family: "Oswald", sans-serif;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    font-weight: 600;
+    transform: translateX(-50%);
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff;
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+    -webkit-text-stroke: 2px black; /* Highlight letters in black */
+    padding: 10px 20px; /* Add padding to increase the prominence of the text */
+    border-radius: 10px; /* Add border-radius for a more polished look */
+    display: inline;
+}
+
+/* Right-aligned navigation */
+.nav-right {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Align items vertically */
+}
+
+.nav-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure that navigation items are displayed in a row */
+}
+
+.nav-right ul li {
+    margin-left: 20px;
+}
+
+.nav-right ul li:first-child {
+    margin-left: 0;
+}
+
+/* Sticky header */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stilizare pentru sectiunea de beneficii */
+.benefits-section {
+    text-align: center;
+    padding: 80px 0; /* Spatiu intre sectiuni */
+    background-color: #f5f5f5; /* Culoare de fundal */
+}
+
+/* Stilizare pentru titlul sectiunii */
+.benefits-section h2 {
+    font-size: 36px; /* Dimensiunea fontului */
+    color: #333; /* Culoarea textului */
+    margin-bottom: 40px; /* Spatiu sub titlu */
+}
+
+/* Stilizare pentru lista de beneficii */
+.benefits-list {
+    list-style-type: none; /* Eliminarea numerotării */
+    padding: 0;
+}
+
+/* Stilizare pentru fiecare beneficiu */
+.benefits-list li {
+    margin-bottom: 30px; /* Spatiu intre beneficii */
+}
+
+/* Stilizare pentru titlul fiecarui beneficiu */
+.benefits-list li strong {
+    font-weight: bold; /* Text bold */
+    color: #007bff; /* Culoarea textului */
+}
+
+/* Stilizare pentru textul fiecarui beneficiu */
+.benefits-list li {
+    font-size: 18px; /* Dimensiunea fontului */
+    color: #666; /* Culoarea textului */
+}
+
+/* Stilizare pentru butonul CTA */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px; /* Spatiu in interiorul butonului */
+    background-color: #007bff; /* Culoare de fundal */
+    color: #fff; /* Culoarea textului */
+    text-decoration: none;
+    border-radius: 4px; /* Rotunjirea marginilor */
+    font-size: 18px; /* Dimensiunea fontului */
+    transition: background-color 0.3s ease; /* Tranzitie pentru culoarea de fundal */
+}
+
+/* Stilizare pentru hover la butonul CTA */
+.cta-button:hover {
+    background-color: #0056b3; /* Culoare de fundal la hover */
+}
