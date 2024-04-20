@@ -18,7 +18,7 @@ header {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -72,8 +72,8 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to bottom right, #4da7db, #66ccff);
-    color: #fff;
+    background: #f5f5f5;
+    color: #333;
     height: 95vh;
 }
 
@@ -84,8 +84,9 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(to bottom right, #ffffff, #b3d9ff); /* Gradient from white to light blue */
-    color: #333; /* Text color to ensure readability */
+    background: #f5f5f5;
+    /* background: linear-gradient(to bottom right, #f5f5f5, #ffffff); */
+    color: #333;
     height: 95vh;
 }
 
@@ -197,13 +198,12 @@ nav ul li a:hover {
 }
 
 .nav-right ul li {
-    margin-left: 20px;
+    margin-left: 20px; /* Add space between list items */
 }
 
 .nav-right ul li:first-child {
-    margin-left: 0;
+    margin-left: 0; /* Remove margin for the first list item */
 }
-
 /* Sticky header */
 .sticky-header {
     position: fixed;
@@ -231,13 +231,20 @@ nav ul li a:hover {
 
 /* Stilizare pentru lista de beneficii */
 .benefits-list {
-    list-style-type: none; /* Eliminarea numerotării */
-    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack the list items vertically */
+    justify-content: center; /* Center the flex items horizontally */
+    align-items: center; /* Center the flex items vertically */
+    width: 80%; /* Set the width of the container to 80% of the page */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0; /* Remove any default padding */
 }
 
-/* Stilizare pentru fiecare beneficiu */
 .benefits-list li {
-    margin-bottom: 30px; /* Spatiu intre beneficii */
+    width: 100%; /* Make each list item occupy 100% of the container width */
+    text-align: left; /* Align the text of list items to the left */
+    margin: 10px 0; /* Add margin between list items for spacing */
+    list-style-type: none; /* Remove default list styles */
 }
 
 /* Stilizare pentru titlul fiecarui beneficiu */
@@ -268,3 +275,43 @@ nav ul li a:hover {
 .cta-button:hover {
     background-color: #0056b3; /* Culoare de fundal la hover */
 }
+
+.logo {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section {
+    opacity: 0; /* Initially hide the section */
+    transition: opacity 0.5s ease; /* Apply transition effect to opacity property */
+}
+
+.section.fade-in {
+    opacity: 1; /* Make the section visible by setting opacity to 1 */
+}
+
+.fade-in-image { animation: fadeIn 3s; }
+
+.fade-in-image:hover {
+    opacity: 100%;
+    transition: opacity 1s;
+  }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 2s;
+  }
+
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
