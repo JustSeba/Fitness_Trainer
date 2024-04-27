@@ -131,6 +131,20 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
+.about_me_pic{
+    height: auto;
+    width: 40vw;
+    display:block;
+    border-radius: 50%;
+}
+
+.diploma_pic{
+    display: inline;
+    width: 20vw;
+    height: auto;
+    padding: 2vw 1vw;
+}
+
 .training_txt {
     width: 45vw;
     height: 45vh;
