@@ -82,8 +82,9 @@ body{
     height: 45px;
 }
 
-.contact-right img{
-    width: 500px;
+.contact-right{
+    width: 400px;
+    font-family: Arial, sans-serif;
 }
 
 @media (max-width:800px){
