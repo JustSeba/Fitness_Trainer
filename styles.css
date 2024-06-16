@@ -157,12 +157,11 @@ nav ul li a:hover {
     border-radius: 50%;
 }
 
-.diploma_pic{
-    display: inline;
-    width: 30vw;
+.diploma_pic{   
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vw;
     height: auto;
-    padding: 2vw 1vw;
-    margin: 0 8%;
 }
 
 .training_txt {
@@ -325,7 +324,113 @@ nav ul li a:hover {
     text-align: left;
 }
 
-.services_h2{
-    text-align: center;
+.gold {
+    background: linear-gradient(145deg, #1a1a00, #663300, #FFD700, #FFAA00);
+    position: relative;
+    border: 8px solid transparent;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.gold:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    z-index: -1;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #FFD700, #FFAA00);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.gold:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.gold{
+margin-right: 15px;
+}
+
+.gold h2 {
+    font-family: 'Times New Roman', serif;
+    text-shadow: none;
     margin-bottom: 2em;
+    text-align: center;
+    letter-spacing: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        #462523 0%,
+        #cb9b51 22%, 
+        #f6e27a 45%,
+        #f6f2c0 50%,
+        #f6e27a 55%,
+        #cb9b51 78%,
+        #462523 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.platinum {
+    background: linear-gradient(145deg, #122018, #3e645f, #6f786f);
+    position: relative;
+    border: 8px solid transparent;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    box-shadow: 0 0 15px rgba(153, 165, 153, 0.7);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.platinum:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    z-index: -1;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #99a599, #c0d9c0);
+    box-shadow: 0 0 30px rgba(153, 165, 153, 0.5);
+    transition: all 0.3s ease;
+}
+
+.platinum:hover {
+    box-shadow: 0 0 30px rgba(153, 165, 153, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.platinum h2 {
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 0.5em;
+    text-align: center;
+    padding-bottom: -10px;
+    text-shadow: none;
+    letter-spacing: 5px;
+    font-size: 36px;
+    font-weight: bold;
+    background-image: linear-gradient(
+        to right,
+        #425342 0%,
+        #9aad98 22%, 
+        #CCCCCC 45%,
+        #E6E6E6 50%,
+        #CCCCCC 55%,
+        #9aad98 78%,
+        #425342 100%
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
